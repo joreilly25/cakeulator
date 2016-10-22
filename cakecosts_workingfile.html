@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>One Sweet Cost</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/cakeulator.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"
+</head>
+
+<body>
+    <header>
+        <div class="jumbotron">
+            <p class="text-center">One Sweet Cost!</p>
+        </div>
+    </header>
+    <div class="container">
+        <form action="" id="cakeorder">
+            <h3>What type of order would you like to price?</h3>
+            <input type="radio" name="ordertype" checked="checked" value="cake" class="radio-inline"> Cake
+            <input type="radio" name="ordertype" value="cupcakes" class="radio-inline"> Cup Cakes
+            <input type="radio" name="ordertype" value="cakecupcakes" class="radio-inline" disabled> Cake &amp; Cupcakes
+        </form>
+        <hr>
+        <form id="costSweetCakes">
+            <div class="form-group desc" id="cake">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12">
+                            <form action="" id="cakeSize">
+                            <div class="sizeofcake">
+                                <h4>Cake Shape</h4>
+                                <input type="radio" name="cakeshape" checked="checked" value="roundcake" class="radio-inline"> Round
+                                <input type="radio" name="cakeshape" value="squarecake" class="radio-inline"> Square
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+        </form>
+        <form id="roundCakes" class="form-horizontal">
+            <div class="form-group descs" id="roundcake">
+                <h4 class="cakeshapeheader">Round Cake Options</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="roundsize" value="30" checked>6" Round (serves 8) <span class="prices">$30</span></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="roundsize" value="45">8" Round (custom decorations - serves 15) <span class="prices">$45</span></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="roundsize" value="65">10" Round (serves 40) <span class="prices">$65</span></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="roundsize" value="130">14" Round (serves 65) <span class="prices">$130</span></label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="roundsize" value="35">8" Round (stripes &amp; polkadots only - serves 15) <span class="prices">$35</span></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="roundsize" value="55">9" Round (serves 25) <span class="prices">$55</span></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="roundsize" value="90">12" Round (serves 50) <span class="prices">$90</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12 finalcost">
+                <label id="thisCakeCosts">Click below to Cakeulate</label>
+                </div>
+                </div>
+                <hr>
+            </div>
+        </form>
+        <form id="squareCakes" class="form-horizontal">
+            <div class="form-group descs" id="squarecake" style="display: none">
+                <h4 class="cakeshapeheader">Square Cake Options</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="squaresize" value="35">6" Square (serves 10) <span class="prices">$35</span></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="squaresize" value="60">9" Square (serves 30) <span class="prices">$60</span></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="squaresize" value="100">12" Square (serves 55) <span class="prices">$100</span></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="squaresize" value="75">1/4 Sheet (serves 45-50) <span class="prices">$75</span></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="squaresize" value="225">Full Sheet (serves 150-200) <span class="prices">$225</span></label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="squaresize" value="45">8" Square (serves 20) <span class="prices">$45</span></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="squaresize" value="75">10" Square (serves 45) <span class="prices">$75</span></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="squaresize" value="150">14" Square (serves 70) <span class="prices">$150</span></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="squaresize" value="120">1/2 Sheet (serves 80-100) <span class="prices">$120</span></label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <button type="button" class="cakeulateBtn" onclick="cakeulateCost()">Cakeulate</button>
+        </form>
+
+
+<!--                         <div class="row">
+                        <div class="col-md-6">
+                        <label for="qty">QTY</label><input type="text" class="form-control" id="qty" oninput="updatesumcakes()">
+                        <label for="unitPrice">Unit Price</label>
+                        <input type="text" class="form-control" id="unitPrice" value="7.50" disabled>
+                        </div>
+                        <div class="col-md-6">
+                        <label for="lineCost">Line Cost</label><input type="text" class="form-control" id="lineCost" disabled ">
+                        </div>
+                        </div>
+        </div>
+      </div>
+      </div>
+    </form> 
+
+        <form id="costSweetCupCakes">
+      <div class="form-group desc" id="cupcakes" style="display: none ">
+        <h4>Cup Cakes</h4>
+        <label for="qtycc">QTY</label><input type="text" class="form-control" id="qtycc" oninput="updatesumcupcakes() ">
+        <label for="unitPricecc">Unit Price</label><input type="text" class="form-control" id="unitPricecc" value="4.50 " disabled>
+        <label for="lineCostcc">Line Cost</label><input type="text" class="form-control" id="lineCostcc" disabled ">
+                    </div>
+        </form>
+        -->
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js " integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin=" anonymous "></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+        <script type="text/javascript" src="scripts/cakeulator.js"></script>
+</body>
+
+</html>

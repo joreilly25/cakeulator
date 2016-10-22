@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>One Sweet Cost</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/cakeulator.css">
+</head>
+
+<body>
+    <header>
+            <div class="jumbotron">
+            <p class="text-center">One Sweet Cost!</p>
+        </div>        
+    </header>
+    <div class="container">
+        <form action="" id="cakeorder">
+            <h3>What type of order would you like to price?</h3>
+            <input type="radio" name="ordertype" checked="checked" value="cake" class="radio-inline"> Cake
+            <input type="radio" name="ordertype" value="cupcakes" class="radio-inline"> Cup Cakes
+            <input type="radio" name="ordertype" value="cakecupcakes" class="radio-inline" disabled> Cake &amp; Cupcakes
+        </form>
+        <hr>
+        <form id="costSweetCakes">
+            <div class="form-group desc" id="cake">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Cakes</h4>
+                        <div class="row">
+                        <div class="col-md-6">
+                        <label for="qty">QTY</label><input type="text" class="form-control" id="qty" oninput="updatesumcakes()">
+                        <!-- <label for="unitPrice">Unit Price</label>
+                        <input type="text" class="form-control" id="unitPrice" value="7.50" disabled> -->
+                        </div>
+                        <div class="col-md-6">
+                        <label for="lineCost">Line Cost</label><input type="text" class="form-control" id="lineCost" disabled ">
+                        </div>
+                        </div>
+        </div>
+      </div>
+      </div>
+    </form>
+
+        <form id="costSweetCupCakes">
+      <div class="form-group desc" id="cupcakes" style="display: none ">
+        <h4>Cup Cakes</h4>
+        <label for="qtycc">QTY</label><input type="text" class="form-control" id="qtycc" oninput="updatesumcupcakes() ">
+        <label for="unitPricecc">Unit Price</label><input type="text" class="form-control" id="unitPricecc" value="4.50 " disabled>
+        <label for="lineCostcc">Line Cost</label><input type="text" class="form-control" id="lineCostcc" disabled ">
+                    </div>
+        </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js " integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin=" anonymous "></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+        <script type="text/javascript" src="scripts/cakeulator.js"></script>
+</body>
+
+</html>
