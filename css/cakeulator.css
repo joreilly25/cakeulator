@@ -1,8 +1,15 @@
 * {
 	box-sizing: border-box;
 }
-body {
+
+.container {
 	background-color: #66CCCC;
+	border-radius: 10px;
+	padding-left: 50px;
+}
+
+body {
+	background-color: #CCFFFF;
 	color: #fff;
 }
 

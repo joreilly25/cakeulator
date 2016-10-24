@@ -6,7 +6,7 @@
           $("div.desc").hide();
           $("#" + selection).show();
       });
-
+      // ----------- TOGGLES VIEW OF CAKE SHAPE (ROUND, SQUARE) -----------
       $("input[name$='cakeshape']").click(function() {
           var cakeSelection = $(this).val();
           console.log(cakeSelection);
@@ -32,11 +32,24 @@
   }
 
   // ----------- CALCULATE COST OF Cake v2.0 -----------
+  // TODO: I eventually want this to update whenever a selection is changed rather than having a button to calculate the cost.
 
   function cakeulateCost() {
-      var cakeCost = $('input[name=roundsize]:checked').val();
-      var result = document.getElementById('thisCakeCosts');
-      var cakeCosty = parseInt(cakeCost) + 10;
-      $('#thisCakeCosts').html("Cost: $" + parseFloat(cakeCosty).toFixed(2));
+      var roundCakeCost = $('input[name=roundsize]:checked').val();
+      var roundCakeCosty = parseFloat(roundCakeCost) + 10;
 
+      var squareCakeCost = $('input[name=squaresize]:checked').val();
+      var squareCakeCosty = parseFloat(squareCakeCost) + 10;
+
+      var tieredCakeCost = $('input[name=tieredsize]:checked').val();
+      var tieredCakeCosty = parseFloat(tieredCakeCost) + 10;
+      console.log($('input[name=cakeshape]:checked').val());
+
+      if ($('input[name=cakeshape]:checked').val() == "roundcake") {
+          $('#thisCakeCosts').html("Cost: $" + parseFloat(roundCakeCosty).toFixed(2));
+      } else if ($('input[name=cakeshape]:checked').val() == "squarecake") {
+          $('#thisCakeCosts').html("Cost: $" + parseFloat(squareCakeCosty).toFixed(2));
+      } else {
+          $('#thisCakeCosts').html("Cost: $" + parseFloat(tieredCakeCosty).toFixed(2));
+      }
   }
