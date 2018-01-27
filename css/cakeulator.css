@@ -5,7 +5,7 @@
 .container {
 	background-color: #66CCCC;
 	border-radius: 10px;
-	padding-left: 50px;
+	padding: 25px;
 }
 
 body {
@@ -29,6 +29,7 @@ header {
 	background-color: #f8cde0;
 	color: white;
 	height: 150px;
+	border-bottom: 2px dashed white;
 }
 
 .jumbotron p {
@@ -54,7 +55,7 @@ header {
 	display: block;
 	background-color: #f8cde0;
 	border: none;
-	border-radius: 5px;
+	border-radius: 10px;
 	font-size: 32px;
 	font-weight: bold;
 	width: 200px;
@@ -62,11 +63,67 @@ header {
 	margin: 0 auto;
 }
 
+hr.dashed {
+	background-color: #66CCCC;
+	border-top: 2px dashed #fff;
+}
+
 .finalcost {
 	font-size: 48px;
 	text-align: center;
+	/*border: 2px dashed white;*/
+	padding-bottom: 10px;
+}
+
+#thisCakeCosts {
+	font-size: 60%;
+}
+
+.form-check-label {
+	padding-left: initial;
 }
 
 hr {
 	margin-right: 50px;
+}
+
+@media (max-width: 768px) {
+	.jumbotron {
+		background-color: #f8cde0;
+		height: 100px;
+		padding-top: 25px;
+	}
+
+	.jumbotron p {
+		font-size: 36px;
+	}
+
+	input[type="radio"] {
+		height: 20px;
+		width: 20px;
+		margin-top: -1px;
+  		vertical-align: middle;
+	}
+
+	h3 {
+		font-size: 15px;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	h4 {
+		text-align: center;
+	}
+
+	.sizeofcake {
+		text-align: center;
+	}
+
+	#thisCakeCosts {
+		font-size: 60%;
+	}
+
+	.finalcost {
+		
+	}
 }
