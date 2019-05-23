@@ -16,17 +16,17 @@
   });
   // ----------- CALCULATE COST OF CAKE -----------
   function updatesumcakes() {
-      var cakeQty = document.getElementById('qty').value;
-      var unitCost = 7.5; // document.getElementById('unitPrice').value
-      var result = document.getElementById('lineCost');
+      var cakeQty = document.querySelector('#qty').value;
+      var unitCost = document.querySelector('#unitPrice').value;
+      var result = document.querySelector('#lineCost');
       var totalCost = cakeQty * unitCost;
       result.value = "$" + parseFloat(totalCost).toFixed(2);
   }
   // ----------- CALCULATE COST OF CUPCAKES -----------
   function updatesumcupcakes() {
-      var cakeQty = document.getElementById('qtycc').value;
-      var unitCost = document.getElementById('unitPricecc').value;
-      var result = document.getElementById('lineCostcc');
+      var cakeQty = document.querySelector('#qtycc').value;
+      var unitCost = document.querySelector('#unitPricecc').value;
+      var result = document.querySelector('#lineCostcc');
       var totalCost = cakeQty * unitCost;
       result.value = "$" + parseFloat(totalCost).toFixed(2);
   }
