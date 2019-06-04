@@ -1,7 +1,7 @@
 # Cakeulator
 Web app to aid in estimating cake costs for guests.
 
-[See Project here](http://justin-oreilly.com/gregs_list/)
+[See Project here](http://justin-oreilly.com/cakeulator/cakecosts.html)
 
 # Technologies used:
   * HTML
