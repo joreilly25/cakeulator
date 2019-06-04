@@ -8,5 +8,5 @@ Web app to aid in estimating cake costs for guests.
   * CSS
   * JavaScript
 
-# Framekworks used:
+# Libraries used:
   * Bootstrap
